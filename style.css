@@ -4,6 +4,8 @@ body {
   box-sizing: border-box;
   background-color: red;
   min-height: 2000px;
+  background-image: url("background.png");
+  background-repeat: no-repeat;
 }
 nav {
   transition: ease 0.5s;
@@ -16,4 +18,9 @@ nav ul li {
 
 nav ul li:hover {
   transform: translateY(2px);
+}
+
+.Home {
+  width: auto;
+  height: 400px;
 }
