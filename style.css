@@ -3,6 +3,10 @@ body {
   margin: 0;
   box-sizing: border-box;
   background-color: red;
+  min-height: 2000px;
+}
+nav {
+  transition: ease 0.5s;
 }
 
 nav ul li {
