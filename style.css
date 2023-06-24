@@ -2,6 +2,9 @@
   font-family: "Anurati";
   src: url("Anurati.otf");
 }
+:root {
+  --skypink: rgba(255, 204, 255);
+}
 body {
   padding: 0;
   margin: 0;
@@ -26,6 +29,10 @@ nav ul li:hover {
   transform: translateY(2px);
 }
 
+.A {
+  overflow-y: ;
+}
+
 .Home {
   width: auto;
   height: 400px;
@@ -39,6 +46,7 @@ nav ul li:hover {
   top: 150px;
   left: 107px;
   cursor: pointer;
+  bottom: -10px;
 }
 
 #day {
@@ -62,4 +70,21 @@ nav ul li:hover {
   font-size: large;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
+}
+
+.barier {
+  position: relative;
+  top: -10px;
+  background-image: linear-gradient(rgba(255, 255, 0, 0), var(--skypink));
+  width: auto;
+  height: 200px;
+  bottom: -10px;
+}
+
+.About {
+  width: auto;
+  height: 300px;
+  background-color: var(--skypink);
+  margin: 0;
+  margin-top: -10px;
 }
