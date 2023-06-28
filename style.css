@@ -3,16 +3,25 @@
   src: url("Anurati.otf");
 }
 :root {
-  --skypink: rgba(255, 204, 255);
+  --pink: rgba(255, 204, 255);
+}
+.hAbout,
+.hProjects,
+.hContact {
+  font-family: "Anurati", sans-serif;
+  text-transform: uppercase;
 }
 body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background-color: red;
-  min-height: 2000px;
+  /* background-color: hsl(250, 100%, 43%); */
+  /* min-height: auto; */
   background-image: url("background.png");
   background-repeat: no-repeat;
+  /* background-attachment: fixed;
+  background-position: center;
+  background-size: cover; */
 }
 nav {
   transition: ease 0.5s;
@@ -35,7 +44,7 @@ nav ul li:hover {
 
 .Home {
   width: auto;
-  height: 400px;
+  min-height: 584px;
 }
 #calendar {
   height: 200px;
@@ -74,17 +83,34 @@ nav ul li:hover {
 
 .barier {
   position: relative;
-  top: -10px;
-  background-image: linear-gradient(rgba(255, 255, 0, 0), var(--skypink));
+  background-image: linear-gradient(rgba(255, 255, 0, 0), var(--pink));
   width: auto;
-  height: 200px;
-  bottom: -10px;
+  height: 190px;
+  margin: 0;
+  top: 200px;
 }
 
 .About {
+  background-color: var(--pink);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: auto;
-  height: 300px;
-  background-color: var(--skypink);
+  min-height: 594px;
   margin: 0;
-  margin-top: -10px;
+}
+
+#Projects {
+  background-color: var(--pink);
+  min-height: 594px;
+}
+#Contact {
+  background-color: var(--pink);
+  min-height: 57x4px;
+}
+footer {
+  width: auto;
+  height: 30px;
+  margin: 0;
+  background-color: ;
 }

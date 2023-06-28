@@ -1,0 +1,35 @@
+.main {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.slide {
+  background-color: black;
+  color: white;
+  height: 70vh;
+  position: relative;
+  border-radius: 10px;
+  padding: 20px;
+  background-size: cover;
+  background-position: 50%;
+  flex: 0.5;
+  cursor: pointer;
+  transition: 0.5s ease flex;
+  -webkit-transition: 0.5s ease flex;
+  -moz-transition: 0.5s ease flex;
+  -ms-transition: 0.5s ease flex;
+  -o-transition: 0.5s ease flex;
+  box-shadow: 8px 20px 20px 0px rgb(137 130 130/ 95%);
+}
+.logo {
+  user-select: none;
+  transition: ease 0.5s;
+}
+.slide h2 {
+  display: none;
+}
+
+.active {
+  flex: 5;
+}

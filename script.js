@@ -9,14 +9,14 @@ document.addEventListener("scroll", function () {
 });
 
 //CALENDAR
+//clock
+const clock = document.getElementById("clock");
+//date
+const time = new Date();
+const date = document.getElementById("date");
+//day
+const day = document.getElementById("day");
 function Calendar() {
-  //clock
-  const clock = document.getElementById("clock");
-  //date
-  const time = new Date();
-  const date = document.getElementById("date");
-  //day
-  const day = document.getElementById("day");
   const Day = [
     "Sunday",
     "Monday",
@@ -49,3 +49,21 @@ function Calendar() {
   window.requestAnimationFrame(Calendar);
 }
 Calendar();
+
+// slider About
+const slides = document.querySelectorAll(".slide");
+const AbHeading = document.querySelectorAll(".slide h2");
+
+slides.forEach((slide, idx) => {
+  slide.addEventListener("click", (e) => {
+    slides.forEach((slide) => {
+      slide.classList.remove("active");
+    });
+    e.currentTarget.classList.toggle("active");
+  });
+});
+
+//project
+const projectCards = document.querySelectorAll(".projectCard");
+let filled = false;
+projectCards.forEach((projectCard, index) => {});
