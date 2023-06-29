@@ -63,7 +63,44 @@ slides.forEach((slide, idx) => {
   });
 });
 
-//project
-const projectCards = document.querySelectorAll(".projectCard");
-let filled = false;
-projectCards.forEach((projectCard, index) => {});
+//Contact send form
+const btnSubmit = document.querySelector(".btn-submit");
+const btnLoading = document.querySelector(".btn-loading");
+const myAlert = document.querySelector(".my-alert");
+const errorAlert = document.querySelector(".my-error-alert");
+function visibleCondition() {
+  myAlert.classList.add("d-block");
+}
+function invisibleCondition() {
+  myAlert.classList.remove("d-none");
+}
+const scriptURL =
+  "https://script.google.com/macros/s/AKfycbwWAdHfjTQNzbvgmB5OIfhH0id6bANB0PI9qvInpB_QdOQsw4xIF9QqYjY0zLYwuCVVFg/exec";
+const form = document.forms["Fayz-Contactform"];
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  //when submit clicked
+  btnLoading.classList.toggle("d-none");
+  btnSubmit.classList.toggle("d-none");
+
+  fetch(scriptURL, { method: "POST", body: new FormData(form) })
+    .then((response) => {
+      console.log("Success!", response);
+      btnLoading.classList.toggle("d-none");
+      btnSubmit.classList.toggle("d-none");
+      //display alert
+      visibleCondition();
+      invisibleCondition();
+      //reset form
+      form.reset();
+    })
+    .catch((error) => {
+      console.error("Error!", error.message);
+      //display error alert
+      errorAlert.classList.toggle("d-none");
+      if (visibleCondition() == true) {
+        invisibleCondition();
+      }
+    });
+});
